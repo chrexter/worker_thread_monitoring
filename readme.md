@@ -1,4 +1,4 @@
-How can I check the number of threads that an Actix-Web program starts for handling incoming requests?
+# 1. How can I check the number of threads that an Actix-Web program starts for handling incoming requests?
 
 ```rust
 use actix_web::{web, App, HttpResponse, HttpServer};
@@ -76,7 +76,7 @@ To use it, just make requests to:
 
 By default, Actix-Web uses the number of physical CPU cores for its worker threads. You can modify this by changing the `.workers()` parameter in the server configuration.
 
-2. Actix-Web spins up all worker threads when the server starts, not on-demand. Let me show you how we can verify this:
+# 2. Actix-Web spins up all worker threads when the server starts, not on-demand. Let me show you how we can verify this:
 
 ```rust
 use actix_web::{web, App, HttpResponse, HttpServer};
@@ -136,7 +136,7 @@ This approach of pre-initializing threads is a common pattern in web servers as 
 - Provides predictable resource usage
 - Allows for better connection handling and keep-alive support
 
-3. The key differences between NodeJS and Actix-Web worker thread handling with examples:
+# 3. The key differences between NodeJS and Actix-Web worker thread handling with examples:
 
 ```javascript
 // main.js
